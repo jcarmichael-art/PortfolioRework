@@ -1,11 +1,12 @@
 import NavLink from "./NavLink";
+import styles from "./Header.module.css";
 
 export default function Header()
 {
     return (
-        <header className="container">
-        <h4 className="text">Jacob Carmichael</h4>  
-        <ul className="nav-inner">
+        <header className={styles.container}>
+        <h4 className={styles.text}>Jacob Carmichael</h4>  
+        <ul className={styles.navInner}>
             <li><NavLink href="https://github.com/jcarmichael-art" label="Github"/></li>
             <li><NavLink href="https://www.instagram.com/cedar_hill_iron_works/" label="Instagram"/></li>
             <li><NavLink href="#skills" label="Skills"/></li>

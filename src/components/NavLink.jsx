@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import styles from "./NavLink.module.css"
+
 
 export default function NavLink({ href, label}) {
     const [clicked, setClicked] = useState(false);
@@ -9,14 +11,12 @@ export default function NavLink({ href, label}) {
     return (
         <a
         href={href}
-        className={clicked ? "nav-btn clicked muted-text" : "nav-btn muted-text"}
+        className={clicked ? `${styles.navBtn} ${styles.clicked} ${styles.mutedText}` : `${styles.navBtn} ${styles.mutedText}`}
         onClick={() => setClicked(true)}
         onMouseLeave={() => setClicked(false)}
         target={openTab ? "_blank" : undefined}
-
         >
             {label}
-
         </a>
     );
 }
