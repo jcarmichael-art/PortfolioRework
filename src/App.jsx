@@ -6,13 +6,14 @@ import './index.css'
 
 import Header from './components/Header'
 import AboutMe from './components/AboutMe'
+import GithubFetch from './components/GithubFetch'
 
 function App() {
 
   return (
     <>
     <div className='divBox'>
-      
+
     <div>
     <Header />
     </div>
@@ -20,6 +21,11 @@ function App() {
     <div>
     <AboutMe/>
     </div>
+
+    <div>
+    <GithubFetch />
+    </div>
+
 
     </div>
     </>

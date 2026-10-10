@@ -1,0 +1,50 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(21, 21, 21, 0.5);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.divBox {
+    position: absolute;
+    top: 3rem;
+    min-height: 500px;
+    min-width: 80%;
+    background-color: var(--page-bg);
+    border: solid 1px var(--border);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.text {
+  color: var(--text);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.mutedText {
+  color: var(--text-muted);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.btn {
+    position: absolute;
+    scale: 2;
+    right: 2rem;
+    top: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--textMuted);
+    font-weight: 300;
+}

@@ -11,7 +11,8 @@
 
 @media (min-width: 768px) {
     .container {
-
+    border-bottom: .5px solid var(--border);
+    padding-bottom: 1rem;
     margin-right: 2rem;
     margin-left: .5rem;
     display: flex;
@@ -22,6 +23,8 @@
 
 @media (max-width: 768px) {
     .container {
+    border-bottom: .5px solid var(--border);
+    padding-bottom: 1rem;
     margin-top: 1rem;
     margin-right: 1rem;
     margin-left: .5rem;

@@ -17,6 +17,8 @@ body {
   font-family: var(--font-main);
 }
 
+
+
 .divBox {
   min-height: 7000px;
   background-color: var(--page-bg);

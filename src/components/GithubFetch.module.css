@@ -1,0 +1,90 @@
+:root {
+    --bg: #151515;
+    --page-bg: #1E2225;
+    --border: #3e494f;
+    --card: #272C30;
+    --text: #e8f1f4;
+    --textMuted: #AEB4B8;
+    --accent: #3CC8BC;
+    --font-main: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+.text {
+  color: var(--text);
+  font-weight: 300;
+  margin: 0;
+}
+
+.mutedText {
+  color: var(--text-muted);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1920px;
+    width: 100;
+}
+
+.box {
+    border: 1.5px solid var(--border);
+    border-radius: .5rem;
+    background-color: var(--card);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    flex: 0 0 40%;
+    margin-top: 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--textMuted);
+    font-weight: 300;
+}
+
+/* 1. Opt-in both the select box and its dropdown menu to the customizable model */
+select, ::picker(select) {
+  appearance: base-select;
+}
+
+select {
+    width: 150px;
+
+}
+
+/* 2. Target and style the dropdown menu container (the picker dialog) */
+::picker(select) {
+  background-color: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Style individual option elements inside the picker menu */
+select option {
+  padding: 8px 12px;
+  color: var(--textMuted);
+  border-radius: 4px;
+}
+
+/* 4. Style the option when hovered or focused */
+select option:hover {
+  background-color: var(--accent);
+  color: var(--border);
+  cursor: pointer;
+}
+
+
+
