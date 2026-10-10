@@ -11,7 +11,13 @@ function App() {
 
   return (
     <>
+    <div className='div-box'>
+
     <Header />
+
+    
+
+    </div>
     </>
   )
 }
