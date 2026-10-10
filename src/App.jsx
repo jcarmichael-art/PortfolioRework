@@ -5,16 +5,21 @@ import viteLogo from './assets/vite.svg'
 import './index.css'
 
 import Header from './components/Header'
+import AboutMe from './components/AboutMe'
 
 function App() {
 
   return (
     <>
     <div className='divBox'>
-
+      
+    <div>
     <Header />
+    </div>
 
-
+    <div>
+    <AboutMe/>
+    </div>
 
     </div>
     </>

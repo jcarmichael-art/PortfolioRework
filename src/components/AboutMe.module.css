@@ -1,0 +1,64 @@
+:root {
+  --bg: #151515;
+  --page-bg: #1E2225;
+  --border: #3e494f;
+  --card: #272C30;
+  --text: #e8f1f4;
+  --textMuted: #AEB4B8;
+  --accent: #3CC8BC;
+  --font-main: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+@media (min-width: 768px) {
+    .container {
+
+    margin-right: 2rem;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    }
+}
+
+.textBox {
+    flex: 1;
+}
+
+.text {
+    color: var(--text);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.mutedText {
+
+    white-space: pre-line;
+    color: var(--textMuted);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+
+img {
+    margin-top: 1rem;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
