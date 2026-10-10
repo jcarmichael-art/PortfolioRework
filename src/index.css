@@ -1,0 +1,55 @@
+:root {
+  --bg: #1E2225;
+  --card: #272C30;
+  --text: #F2F3F1;
+  --text-muted: #AEB4B8;
+  --accent: #3CC8BC;
+  --font-main: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  font-family: var(--font-main);
+}
+
+
+.text {
+  color: var(--text);
+}
+
+.muted-text {
+  color: var(--text-muted);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .5px solid var(--text-muted);
+  max-width: 1920px;
+  width: 100;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+a {
+  text-decoration: none;
+}
