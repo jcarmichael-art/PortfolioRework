@@ -89,14 +89,13 @@ export default function GetRepos() {
             <p1 className={styles.text}> {repo.name} </p1>
             <p1 className={styles.mutedText}> {repo.description} </p1>
             <button className={styles.btn} onClick={() => setSelectedRepo(repo)}>More details</button>
-            {selectedRepo && (
-                <Modal repo={selectedRepo} onClose={() => setSelectedRepo(null)} />
-            ) }
-
-
             </div>
             )
         })}
+
+        {selectedRepo && (
+            <Modal repo={selectedRepo} onClose={() => setSelectedRepo(null)} />
+        ) }  
         </div>
         </>
     )
