@@ -71,6 +71,8 @@ export default function GetRepos() {
     sorter()
     return (
         <>
+        <div className={styles.controlsRow} id="projects">
+        <h1 className={styles.text}>Projects</h1>    
         <select className={`${styles.custonSelectWraper} ${styles.mutedText}`}
         value={selectedValue}
         onChange={(event) => setSelectedValue(event.target.value)}>
@@ -79,6 +81,9 @@ export default function GetRepos() {
             <option> oldest</option>
             <option> newest</option>
         </select>
+   
+        </div>
+
         <div className={styles.container}>
 
 

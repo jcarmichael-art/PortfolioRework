@@ -24,10 +24,28 @@
   margin: 0;
 }
 
-/* Spacing for the sort select. Name matches the class used in GithubFetch.jsx.
-   Placed after .mutedText so its margin wins over that rule's margin: 0. */
+/* Row holding the section title and the sort select, side by side */
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 24px 0;
+}
+
+/* Section title next to the select */
+.sectionTitle {
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Sort select. Name matches the class used in GithubFetch.jsx.
+   Margin is 0 now because spacing comes from .controlsRow.
+   Placed after .mutedText so it wins over that rule. */
 .custonSelectWraper {
-  margin: 24px 0 0 24px;
+  margin: 0;
 }
 
 /* Card grid: as many columns as fit, never narrower than 300px */

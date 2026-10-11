@@ -5,6 +5,7 @@
     --card: #272C30;
     --text: #e8f1f4;
     --textMuted: #AEB4B8;
+    --text-muted: #AEB4B8;
     --accent: #3CC8BC;
     --font-main: "IBM Plex Sans", system-ui, sans-serif;
 }
@@ -23,36 +24,82 @@
   margin: 0;
 }
 
+/* Spacing for the sort select. Name matches the class used in GithubFetch.jsx.
+   Placed after .mutedText so its margin wins over that rule's margin: 0. */
+.custonSelectWraper {
+  margin: 0 0 0 0;
+}
+
+/* Card grid: as many columns as fit, never narrower than 300px */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 22px;
     max-width: 1920px;
-    width: 100;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px 24px 40px;
+}
+
+.controlsRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 24px;
 }
 
 .box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+    min-height: 150px;
+    padding: 22px;
     border: 1.5px solid var(--border);
     border-radius: .5rem;
     background-color: var(--card);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    flex: 0 0 40%;
-    margin-top: 1rem;
 }
 
+/* Repo name: first element in each card */
+.box > :first-child {
+    font-size: 22px;
+}
 
+.box .mutedText {
+    line-height: 1.5;
+}
 
 .btn {
-    margin-top: 1rem;
-    margin-left: 1rem;
+    align-self: flex-start;
+    margin: auto 0 0;
+    padding: 14px 0 0;
     background-color: transparent;
     border: none;
     color: var(--textMuted);
+    font: inherit;
     font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn::after {
+    content: "\2192";
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    color: var(--accent);
+}
+
+.btn:hover::after {
+    transform: translateX(4px);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 /* 1. Opt-in both the select box and its dropdown menu to the customizable model */
@@ -88,5 +135,3 @@ select option:hover {
   color: var(--border);
   cursor: pointer;
 }
-
-

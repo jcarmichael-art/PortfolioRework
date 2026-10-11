@@ -14,9 +14,9 @@ function App() {
     <>
     <div className='divBox'>
 
-    <div>
+
     <Header />
-    </div>
+
 
     <div>
     <AboutMe/>

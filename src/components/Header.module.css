@@ -20,16 +20,12 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 1920px;
-  margin: 0 auto;
   padding: .5rem 1rem;
   min-height: 50px;
   background-color: var(--page-bg);
   border-bottom: .5px solid var(--border);
 }
 
-.divBox {
-  min-height: 7000px;
-}
 
 .text {
   color: var(--text);
