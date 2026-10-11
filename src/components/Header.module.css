@@ -1,29 +1,41 @@
-
 :root {
-  --bg: #151515;
-  --page-bg: #1E2225;
-  --border: #3e494f;
-  --card: #272C30;
-  --text: #e8f1f4;
-  --text-muted: #AEB4B8;
-  --accent: #3CC8BC;
-  --font-main: "IBM Plex Sans", system-ui, sans-serif;
+    --bg: #151515;
+    --page-bg: #1E2225;
+    --border: #3e494f;
+    --card: #272C30;
+    --text: #e8f1f4;
+    --textMuted: #AEB4B8;
+    --text-muted: #AEB4B8;
+    --accent: #3CC8BC;
+    --font-main: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 50px;
+  background-color: var(--page-bg);
+  border-bottom: .5px solid var(--border);
 }
 
 .divBox {
   min-height: 7000px;
-  background-color: var(--page-bg);
-  border: solid 1px var(--border);
-  border-radius: .5rem;
-  padding: .5rem;
 }
 
 .text {
   color: var(--text);
   font-weight: 300;
-  display: flex;
-  align-items: center;
   margin: 0;
+  white-space: nowrap;
 }
 
 .mutedText {
@@ -32,34 +44,26 @@
   display: flex;
   align-items: center;
   margin: 0;
-}
-
-.container {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: .5px solid var(--border);
-  max-width: 1920px;
-  width: 100;
-  margin: 0 auto;
-  padding: 0 1rem;
-  height: 50px;
+  white-space: nowrap;
 }
 
 .navLinks {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .navInner {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
