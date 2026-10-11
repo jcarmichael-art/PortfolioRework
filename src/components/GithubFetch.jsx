@@ -71,7 +71,7 @@ export default function GetRepos() {
     sorter()
     return (
         <>
-        <select className={`${styles.mutedText}`}
+        <select className={`${styles.customSelect} ${styles.mutedText}`}
         value={selectedValue}
         onChange={(event) => setSelectedValue(event.target.value)}>
             <option> updated</option>            

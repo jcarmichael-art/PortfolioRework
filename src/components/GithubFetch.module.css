@@ -44,6 +44,8 @@
     margin-top: 1rem;
 }
 
+
+
 .btn {
     margin-top: 1rem;
     margin-left: 1rem;
@@ -65,11 +67,12 @@ select {
 
 /* 2. Target and style the dropdown menu container (the picker dialog) */
 ::picker(select) {
-  background-color: var(--bg);
-  border: 2px solid var(--accent);
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    top: calc(anchor(bottom) + 10px);
+    background-color: var(--bg);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* 3. Style individual option elements inside the picker menu */
@@ -85,6 +88,5 @@ select option:hover {
   color: var(--border);
   cursor: pointer;
 }
-
 
 
