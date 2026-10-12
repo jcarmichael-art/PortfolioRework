@@ -52,15 +52,12 @@ export default function Modal({ repo, onClose })
                 )}
 
                 <div className={styles.actions}>
-                    <a
-                        className={styles.btn}
-                        href={repo.html_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a className={styles.btn} href={repo.html_url} target="_blank" rel="noopener noreferrer">
                         View on GitHub
                     </a>
+                    {repo.homepage && (<a className={styles.btn} href={repo.homepage} target="_blank" rel="noopener noreferrer">Open Project</a>)}  
                 </div>
+                    
             </div>
         </div>
     )
