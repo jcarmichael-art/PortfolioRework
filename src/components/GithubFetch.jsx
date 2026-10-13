@@ -54,16 +54,16 @@ export default function GetRepos() {
 
     function sorter()
     {
-        if (selectedValue === 'updated')
+        if (selectedValue === 'Last Updated')
         {
             safeSortRepos.sort((a,b) => new Date(a.updated_at) - new Date(b.updated_at))
-        } else if (selectedValue === 'name')
+        } else if (selectedValue === 'Name')
         {
             safeSortRepos.sort((a,b) => a.name.localeCompare(b.name))
-        } else if (selectedValue === 'oldest')
+        } else if (selectedValue === 'Oldest')
         {
             safeSortRepos.sort((a,b) => new Date(a.created_at) - new Date(b.created_at))
-        } else if (selectedValue === 'newest')
+        } else if (selectedValue === 'Newest')
         {
             safeSortRepos.sort((a,b) => new Date(b.created_at) - new Date(a.created_at))
         }
@@ -76,10 +76,10 @@ export default function GetRepos() {
         <select className={`${styles.custonSelectWraper} ${styles.mutedText}`}
         value={selectedValue}
         onChange={(event) => setSelectedValue(event.target.value)}>
-            <option> updated</option>            
+            <option> Last Updated </option>            
             <option> Name </option>
-            <option> oldest</option>
-            <option> newest</option>
+            <option> Oldest </option>
+            <option> Newest </option>
         </select>
    
         </div>
