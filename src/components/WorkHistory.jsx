@@ -5,7 +5,7 @@ export default function WorkHistory()
     const jobs = [
         {
             name: 'Valley Tool Inc',
-            title: 'Production lead',
+            title: 'Team lead, CNC parts manufacturer',
             start: 'Feb 2017',
             end: 'Present',
             current: true,
@@ -36,8 +36,8 @@ export default function WorkHistory()
                     key={job.name}
                     className={job.current ? `${styles.job} ${styles.now}` : styles.job}
                 >
-                    <div className={styles.date}>
-                        {job.start} – {job.current ? <em>{job.end}</em> : job.end}
+                    <div className={styles.date} >
+                        {job.start} - {job.current ? <em>{job.end}</em> : job.end}
                     </div>
                     <div className={styles.body}>
                         <p className={styles.company}>{job.name}</p>

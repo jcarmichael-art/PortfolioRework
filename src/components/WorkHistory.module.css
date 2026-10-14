@@ -2,8 +2,7 @@
   max-width: 1920px;
   box-sizing: border-box;
   margin: 0 1.5rem 1rem;
-  padding: 24px 0 0;
-  border-bottom: 0.5px solid var(--border, #3e494f);
+  padding: 24px 0 8px;
 }
 
 .sectionTitle {
@@ -40,7 +39,6 @@
 .body {
   position: relative;
   padding-left: 28px;
-  border-left: 1.5px solid var(--border, #3e494f);
 }
 
 .body::before {
@@ -59,15 +57,6 @@
 /* Current job: filled dot */
 .now .body::before {
   background-color: var(--accent, #3CC8BC);
-}
-
-/* The last job ends the timeline line */
-.job:last-child .body {
-  border-left-color: transparent;
-}
-
-.job:last-child .body::before {
-  left: -6px;
 }
 
 .company {
