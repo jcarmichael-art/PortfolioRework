@@ -22,7 +22,7 @@ html {
 }
 
 .divBox {
-  min-height: 7000px;
+
   background-color: var(--page-bg);
   border: solid 1px var(--border);
   border-radius: .5rem;
