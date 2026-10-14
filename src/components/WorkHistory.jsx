@@ -5,7 +5,7 @@ export default function WorkHistory()
     const jobs = [
         {
             name: 'Valley Tool Inc',
-            title: 'Your job title here',
+            title: 'Production lead',
             start: 'Feb 2017',
             end: 'Present',
             current: true,
