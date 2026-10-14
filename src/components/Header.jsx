@@ -7,6 +7,7 @@ export default function Header()
         <header className={styles.container}>
         <h4 className={styles.text}>Jacob Carmichael</h4>  
         <ul className={styles.navInner}>
+            <li><NavLink href="#about" label="About"/></li>
             <li><NavLink href="#skills" label="Skills"/></li>
             <li><NavLink href="#projects" label="Projects"/></li>
             <li><NavLink href="https://github.com/jcarmichael-art" label="Github"/></li>

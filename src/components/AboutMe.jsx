@@ -8,7 +8,7 @@ export default function AboutMe(){
     return (
         <>
 
-        <div className={styles.container}>
+        <div className={styles.container} id="about">
 
         <img src="pfp.png"></img>
 
