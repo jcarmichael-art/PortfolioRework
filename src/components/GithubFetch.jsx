@@ -1,45 +1,21 @@
 import { useState, useEffect } from "react";
-
-import Modal from './Modal.jsx'
-
-import styles from './GithubFetch.module.css'
+import RepoList from "./RepoList.jsx";
+import Sorter from './Sorter.jsx';
+import Modal from './Modal.jsx';
+import styles from './GithubFetch.module.css';
 
 
 export default function GetRepos() {
     const [selectedRepo, setSelectedRepo] = useState(null)
-    const [selectedValue, setSelectedValue] = useState('name')
+    const [selectedValue, setSelectedValue] = useState('Last Updated')
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [userName, setUserName] = useState("jcarmichael-art");
+    const [userName, setUserName] = useState('jcarmichael-art');
 
     useEffect(() => 
     {
-        async function RepoList()
-        {
-            try
-            {
-                setLoading(true);
-                setError(null);
-
-                const response = await fetch(
-                    `https://api.github.com/users/jcarmichael-art/repos`
-                );
-
-                if (!response.ok)
-                {
-                    throw new Error(`Github returned ${response.status}`);
-                }
-
-                const data = await response.json();
-                setRepos(data);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        }
-        RepoList();
+        RepoList(userName, setRepos, setLoading, setError);
     }, [userName]);
 
     if (loading)
@@ -50,25 +26,11 @@ export default function GetRepos() {
     {
         return <p className="text">Something went wrong {error}</p>
     }
+
     const safeSortRepos = [...repos];
 
-    function sorter()
-    {
-        if (selectedValue === 'Last Updated')
-        {
-            safeSortRepos.sort((a,b) => new Date(a.updated_at) - new Date(b.updated_at))
-        } else if (selectedValue === 'Name')
-        {
-            safeSortRepos.sort((a,b) => a.name.localeCompare(b.name))
-        } else if (selectedValue === 'Oldest')
-        {
-            safeSortRepos.sort((a,b) => new Date(a.created_at) - new Date(b.created_at))
-        } else if (selectedValue === 'Newest')
-        {
-            safeSortRepos.sort((a,b) => new Date(b.created_at) - new Date(a.created_at))
-        }
-    }
-    sorter()
+    Sorter(safeSortRepos, selectedValue);
+
     return (
         <>
         <div className={styles.controlsRow} id="projects">
@@ -83,9 +45,7 @@ export default function GetRepos() {
         </select>
    
         </div>
-
         <div className={styles.container}>
-
 
         {safeSortRepos.map((repo) =>
         {

@@ -15,7 +15,7 @@ export default function AboutMe(){
         <div className="textBox">
 
         <h1 className={styles.text}> I'm Jacob,</h1>
-        <p className={styles.mutedText}>{`I am a machinist and software developer from North Mississippi. I'm a problem solver who likes getting deep into the weeds. I translate solutions across trades, from CNC offsets to game logic, and I'm focused on automation that delivers immediate results without slowing the system down.`} </p>
+        <p className={styles.mutedText}>{`A machinist and software developer from North Mississippi. I go after the root cause, not the symptom, and I carry what works in one shop over to the next, whether that shop has a spindle or a server. Solving problems is both my hobby and career.`} </p>
 
         </div>
         </div>

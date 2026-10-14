@@ -48,15 +48,17 @@
   margin: 0;
 }
 
-/* Card grid: as many columns as fit, never narrower than 300px */
+/* Card grid: as many columns as fit, never narrower than 300px.
+   Side margins match the About and Skills sections; the thin line sits below. */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 22px;
     max-width: 1920px;
-    width: 100%;
     box-sizing: border-box;
-    padding: 22px 24px 40px;
+    padding: 22px 0 1.5rem;
+    margin: 0 1.5rem 1rem;
+    border-bottom: 0.5px solid var(--border);
 }
 
 .box {

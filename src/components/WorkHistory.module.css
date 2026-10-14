@@ -1,0 +1,110 @@
+.history {
+  max-width: 1920px;
+  box-sizing: border-box;
+  margin: 0 1.5rem 1rem;
+  padding: 24px 0 0;
+  border-bottom: 0.5px solid var(--border, #3e494f);
+}
+
+.sectionTitle {
+  margin: 0 0 22px;
+  color: var(--text, #e8f1f4);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+/* One job: dates on the left, details on the right */
+.job {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 0 24px;
+  padding-bottom: 26px;
+}
+
+.date {
+  padding-top: 4px;
+  text-align: right;
+  color: var(--text-muted, #AEB4B8);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.date em {
+  font-style: normal;
+  color: var(--accent, #3CC8BC);
+}
+
+/* Right column with the timeline line and dot */
+.body {
+  position: relative;
+  padding-left: 28px;
+  border-left: 1.5px solid var(--border, #3e494f);
+}
+
+.body::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent, #3CC8BC);
+  background-color: var(--page-bg, #1E2225);
+}
+
+/* Current job: filled dot */
+.now .body::before {
+  background-color: var(--accent, #3CC8BC);
+}
+
+/* The last job ends the timeline line */
+.job:last-child .body {
+  border-left-color: transparent;
+}
+
+.job:last-child .body::before {
+  left: -6px;
+}
+
+.company {
+  margin: 0;
+  color: var(--text, #e8f1f4);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.title {
+  margin: 2px 0 8px;
+  color: var(--accent, #3CC8BC);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted, #AEB4B8);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Phones: dates move above the details */
+@media (max-width: 600px) {
+  .job {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .date {
+    text-align: left;
+    padding-left: 28px;
+  }
+}

@@ -1,0 +1,59 @@
+/* Skills section: heading, then labeled groups of chips, with a thin line below */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1920px;
+  box-sizing: border-box;
+  padding: 24px 0 1rem;
+  margin: 0 1.5rem 1rem;
+  border-bottom: 0.5px solid var(--border, #3e494f);
+}
+
+/* Section heading: matches the "Projects" title */
+.text {
+  flex-basis: 100%;
+  margin: 0 0 6px;
+  color: var(--text, #e8f1f4);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+/* Group labels: "Languages", "Software", "Hands-On" */
+.mutedText {
+  flex-basis: 100%;
+  margin: 8px 0 0;
+  color: var(--text-muted, #AEB4B8);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Extra breathing room above the 2nd and 3rd labels, which follow a chip */
+.tag + .mutedText {
+  margin-top: 20px;
+}
+
+/* One chip */
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px solid var(--accent, #3CC8BC);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--accent, #3CC8BC);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  background-color: var(--accent, #3CC8BC);
+  color: var(--page-bg, #1E2225);
+}

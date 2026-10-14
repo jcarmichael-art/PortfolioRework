@@ -1,22 +1,18 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './index.css'
 
 import Header from './components/Header'
 import AboutMe from './components/AboutMe'
+import Skills from './components/Skills'
 import GithubFetch from './components/GithubFetch'
+import WorkHistory from './components/WorkHistory'
 
 function App() {
 
   return (
     <>
     <div className='divBox'>
-
-
     <Header />
-
 
     <div>
     <AboutMe/>
@@ -24,7 +20,16 @@ function App() {
 
     <div>
     <GithubFetch />
+    </div>   
+
+    <div>
+    <Skills/>
     </div>
+
+    <div>
+    <WorkHistory />
+    </div>
+
 
 
     </div>
